@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+	<title>Nonemergency</title>
+	<script type="text/javascript">
+		window.onload = function() {
+			var element = document.querySelector('.image-showcase > *:first-child');
+			var elementHeight = element.offsetHeight / 2; 
+			element.style.setProperty('--first-image-offset', `${elementHeight}px`);
+			var element = document.querySelector('.image-showcase > *:last-child');
+			var elementHeight = element.offsetHeight / 2; 
+			element.style.setProperty('--last-image-offset', `${elementHeight}px`);
+		}
+	</script>
+</head>
+<body>
+	<header>
+		<div class="wrapper">
+			<img src="assets/nonem.png" alt="Logo" id="logo">
+			<div id="header-links">
+				<a href="#">Newsletter</a>
+				<a href="#">Social</a>
+				<a href="#">Contact</a>
+			</div>
+		</div>
+	</header>
+	<div class="wrapper">
+		<section>
+			<div class="product-info fixed-product-object">
+				<p class="bold">MDMA long-sleeve</p>
+				<div>
+					<p>Patches on both sleeves.</p>
+					<p>Our Debut piece.</p>
+					<p>Relaxed/Boxy fit.</p>
+					<p>Models wearing size S.</p>
+				</div>
+				<div>
+					<p>This item is part of a limited run of 25.</p>
+				</div>
+				<div>
+					<p>97% cotton; 3% spandex.</p>
+					<p>Designed and manufactured in Europe.</p>
+				</div>
+			</div>
+			<div class="image-showcase">
+				<img src="assets/MDMA-photos/photo2.jpg">
+				<img src="assets/MDMA-photos/photo0.jpg">
+				<video autoplay muted loop controls>
+					<source src="assets/MDMA-photos/video0.MOV" type="video/mp4">
+				</video>
+				<img src="assets/MDMA-photos/photo1.jpg">
+			</div>
+			<div class="purchase-section fixed-product-object">
+				<p class="bold">Purchase</p>
+				<p class="price">Price: <b>$50</b></p>
+				<form action="/buy">
+					<select name="size" id="size" class="size-dropdown">
+						<optgroup label="Choose Size">
+							<option value="S">S</option>
+							<option value="M">M</option>
+						</optgroup>
+					</select>
+					<div class="button-container">
+						<input type="submit" value="Buy Now" class="button">
+					</div>
+				</form>
+			</div>
+		</section>
+	</div>
+	<div class="footer-border">
+		<footer class="wrapper">
+			<p class="small-text">© 2025 <span class="bold">Nonemergency OÜ</span>. All Rights Reserved.</p>
+			<span id="legal"><a href="">Privacy Policy</a><a href="">Terms of Service</a></span>
+		</footer>
+	</div>
+</body>
+</html>
