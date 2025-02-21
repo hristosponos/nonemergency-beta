@@ -11,20 +11,35 @@
 			var element = document.querySelector('.image-showcase > *:first-child');
 			var elementHeight = element.offsetHeight / 2; 
 			element.style.setProperty('--first-image-offset', `${elementHeight}px`);
-			var element = document.querySelector('.image-showcase > *:last-child');
-			var elementHeight = element.offsetHeight / 2; 
+			
+			element = document.querySelector('.image-showcase > *:last-child');
+			elementHeight = element.offsetHeight / 2; 
 			element.style.setProperty('--last-image-offset', `${elementHeight}px`);
 		}
 	</script>
 </head>
 <body>
+	<p id="js-disabled">WARNING: JavaScript is disabled on your browser. Some features will not work. <br>Enable JavaScript in order to enjoy properly-working website.</p>
+	<script type="text/javascript">
+		  const element = document.getElementById("js-disabled");
+		  if (element) {
+		    element.remove();
+		  }
+	</script>
 	<header>
 		<div class="wrapper">
 			<img src="assets/nonem.png" alt="Logo" id="logo">
 			<div id="header-links">
 				<a href="#">Newsletter</a>
-				<a href="#">Social</a>
-				<a href="#">Contact</a>
+				<div class="dropdown">
+					<a>Social</a>
+					<div class="dropdown-items">
+						<a href="">TikTok</a>
+						<a href="">Instagram</a>
+						<a href="">Pinterest</a>
+					</div>
+				</div>
+				<a href="mailto:contact@nonemergency.eu">Contact</a>
 			</div>
 		</div>
 	</header>
@@ -33,13 +48,13 @@
 			<div class="product-info fixed-product-object">
 				<p class="bold">MDMA long-sleeve</p>
 				<div>
-					<p>Patches on both sleeves.</p>
-					<p>Our Debut piece.</p>
-					<p>Relaxed/Boxy fit.</p>
-					<p>Models wearing size S.</p>
+					<p>This long-sleeve is our debut piece</p>
+					<p>and is a part of a limited run of 25.</p>
 				</div>
 				<div>
-					<p>This item is part of a limited run of 25.</p>
+					<p>Has patches on both sleeves.</p>
+					<p>Relaxed/Boxy fit.</p>
+					<p>Models wearing size S.</p>
 				</div>
 				<div>
 					<p>97% cotton; 3% spandex.</p>
@@ -49,27 +64,44 @@
 			<div class="image-showcase">
 				<img src="assets/MDMA-photos/photo2.jpg">
 				<img src="assets/MDMA-photos/photo0.jpg">
-				<video autoplay muted loop controls>
-					<source src="assets/MDMA-photos/video0.MOV" type="video/mp4">
+				<video autoplay muted loop>
+					<source src="assets/MDMA-photos/video0.mp4" type="video/mp4">
 				</video>
 				<img src="assets/MDMA-photos/photo1.jpg">
 			</div>
 			<div class="purchase-section fixed-product-object">
 				<p class="bold">Purchase</p>
-				<p class="price">Price: <b>$50</b></p>
+				<p class="price">Price: €50</p>
 				<form action="/buy">
-					<select name="size" id="size" class="size-dropdown">
-						<optgroup label="Choose Size">
-							<option value="S">S</option>
-							<option value="M">M</option>
-						</optgroup>
-					</select>
-					<div class="button-container">
-						<input type="submit" value="Buy Now" class="button">
+					<div class="size-info">
+						<p>Size:</p>
+						<a>Size Guide</a>
 					</div>
+					<select name="size" id="size" class="form-input">
+						<option selected disabled>Choose Size</option>
+						<option value="S">S</option>
+						<option value="M">M</option>
+					</select>
+					<input type="submit" value="Buy Now" class="button">
 				</form>
 			</div>
 		</section>
+		<section class="newsletter-section">
+			<div class="newsletter">
+				<div class="newsletter-heading">
+					<h2>Newsletter</h2>
+					<a><img src="assets/X.svg"></a>
+				</div>
+				<hr>
+				<p>Sign up to email updates on Nonemergency releases and more.<br>You may cancel anytime.</p>
+				<form action="" method="POST">
+					<input type="email" name="e" class="form-input" placeholder="E-mail">
+					<input type="submit" value="Sign Up" class="button">
+				</form>
+				<div class="background-blur"></div>
+			</div>
+		</section>
+	</div>
 	</div>
 	<div class="footer-border">
 		<footer class="wrapper">
