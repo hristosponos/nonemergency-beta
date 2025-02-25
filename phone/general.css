@@ -1,10 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Averia+Sans+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Jost:ital,wght@0,100..900;1,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Mukta+Mahee:wght@200;300;400;500;600;700;800&family=Noto+Sans+Cuneiform&family=Noto+Sans+KR:wght@100..900&family=Noto+Sans+Mono:wght@100..900&family=Recursive:wght@300..1000&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Yantramanav:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yantramanav:wght@100;300;400;500;700;900&display=swap');
 /* RESET & FONT */
-/*
-@import url('https://fonts.googleapis.com/css2?family=Monda:wght@400..700&display=swap');
 
-!!! FIX URL ABOVE !!!
-*/
 
 #js-disabled{
     position: fixed;
@@ -36,6 +32,7 @@
 h2{
     font-weight: 800;
     font-size: 2.25rem;
+    line-height: 100%;
 }
 
 *:focus{
@@ -49,8 +46,6 @@ hr{
 footer, section, .grid{
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    gap: 20px;
 }
 
 .button-container{
@@ -73,16 +68,24 @@ button, .button{
 
 button:hover, .button:hover, button:focus, .button:focus{
     text-decoration: underline;
+    text-decoration-thickness: 2px;
 }
 
 .not-allowed{
     cursor: not-allowed !important;
 }
 
-.wrapper{ /* ADD PADDING FOR SCREENS LESS THAN 1440px */
-    max-width: 1440px; /* ???? */
+.wrapper{
+    max-width: 1440px;
     margin: 0 auto 0 auto;
     box-sizing: border-box;
+}
+
+@media (max-width:  1500px){
+    .wrapper{
+        padding: 0 20px;
+        margin: 0;
+    }
 }
 
 a{
@@ -96,13 +99,6 @@ a:hover{
 
 .bold{
     font-weight: 600;
-}
-
-.fixed-product-object{
-    position: sticky;
-    height: fit-content;
-    top: 50%;
-    transform: translateY(-50%);
 }
 
 select{
@@ -124,10 +120,9 @@ select:focus{
 /*  HEADER  */
 
 header{
-
     position: fixed;
     width: 100%;
-
+    z-index: 100;
     border-top: 1px solid rgba(0, 0, 0, 0.50);
     border-bottom: 1px solid rgba(0, 0, 0, 0.50);
     background: #FFF;
@@ -150,79 +145,7 @@ header > .wrapper{
     transform: translateX(-50%);
 }
 
-#header-links{
-    display: flex;
-    gap: 20px;
-}
-
-/* DROPDOWN */
-
-.dropdown{
-    position: relative;
-    display: inline-block;
-}
-
-.dropdown-items{
-    display: none;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    border: 1px solid;
-}
-
-.dropdown-items a{
-    text-align: center;
-    background: rgba(255, 255, 255, 1);
-    padding: 0.5rem 1rem;
-    display: block;
-}   
-
-.dropdown:hover .dropdown-items{
-    display: block;
-}
-
-/* PRODUCT INFO  */
-
-.product-info{
-    grid-column: span 3;
-}
-
-.product-info div{
-    margin-bottom: .25rem;
-}
-
-.product-info div:last-child{
-    margin-bottom: 0;
-}
-
-/* IMAGE SHOWCASE */
-
-.image-showcase{
-    grid-column: 4 / span 6;
-    flex-direction: column;
-    display: flex;
-    align-items: center;
-}
-
-.image-showcase > img, video{
-    max-width: 100%;
-    max-height: 80vh;
-    padding-bottom: 2rem;
-}
-
-.image-showcase > *:first-child{
-    margin-top: calc(50vh - var(--first-image-offset));
-}
-
-.image-showcase > *:last-child{
-    margin-bottom: calc(50vh - var(--last-image-offset) - 4rem); /* 4rem = 2 rem bottom padding; 2 rem footer */
-}
-
 /* PURCHASE SECTION */
-
-.purchase-section{
-    grid-column: 11 / 13;
-}
 
 .purchase-section form{
     width: 100%;
@@ -231,6 +154,7 @@ header > .wrapper{
 
 .purchase-section form *{
     width: -webkit-fill-available;
+    width: fill-available;
 }
 
 .size-info{
@@ -282,10 +206,6 @@ footer{
     z-index: 2;
 }
 
-.newsletter h2{
-    line-height: 100%;
-}
-
 .newsletter form{
     display: flex;
     gap: 8px;
@@ -294,6 +214,7 @@ footer{
 
 .newsletter input[type="email"]{
     width: -webkit-fill-available;
+    width: fill-available;
 }
 
 .newsletter hr{

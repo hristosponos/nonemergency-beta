@@ -1,0 +1,38 @@
+@media (max-width: 800px){
+	#burger{
+		display: block;
+	}
+
+	#header-links{
+		display: none;
+	}
+}
+
+
+@media (max-width: 1100px){
+	.purchase-section{
+		grid-column: 10 / 13;
+	}
+}
+
+@media (max-width: 700px){
+	section * {
+		margin: 0;
+		padding: 0;
+		position: unset;
+		grid-column: unset !important;
+	}
+
+	footer, section, .grid{
+		grid-template-columns: repeat(4, 1fr);
+	}
+
+	.image-showcase{
+		grid-column: span 4 !important;
+	}
+
+	.image-showcase *{
+		max-width: 80vw !important;
+		max-height: 50vh !important;
+	}
+}

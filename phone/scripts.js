@@ -33,3 +33,23 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 });
+
+// REDIRECT TO STRIPE
+
+document.addEventListener("DOMContentLoaded", function() {
+    const form = document.getElementById("buy-product-form");
+    const sizeSelect = document.getElementById("size");
+
+    form.addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        const selectedSize = sizeSelect.value;
+        if (selectedSize=="not-selected") {
+            alert("Please choose a size to continue to checkout.");
+        } else if (selectedSize == "M"){
+            window.location.href = 'https://buy.stripe.com/test_00gbITbbR0Xv7hC7st';
+        } else if (selectedSize == "S"){
+            window.location.href = 'https://buy.stripe.com/test_3cs28j7ZFbC931m6oo';
+        }
+    });
+});
