@@ -1,6 +1,25 @@
 /* DESKTOP STYLES */
 
 @media (min-width: 700px){
+
+	/* REMOVE CONFLICT SWIPER.JS STYLES */
+	#product-visual{
+		display: grid !important;
+		max-width: 1440px;
+		margin: 0 auto;
+	}
+	
+	.swiper-slide{
+		width: fit-content;
+		height: fit-content;
+	}
+
+
+	.image-showcase img, .image-showcase video{
+		height: auto !important;
+		width: auto !important;
+	}
+
 	/* GENERAL */
 
 		.fixed-product-object{
@@ -76,7 +95,7 @@
 	    align-items: center;
 	}
 
-	.image-showcase > img, video{
+	.image-showcase img, .image-showcase video{
 	    max-width: 100%;
 	    max-height: 80vh;
 	    padding-bottom: 2rem;
