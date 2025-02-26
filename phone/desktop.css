@@ -86,6 +86,14 @@
 	    margin-bottom: 0;
 	}
 
+	.product-info .price{
+		display: none;
+	}
+
+	.product-info .section-title{
+		display: none;
+	}
+
 	/* IMAGE SHOWCASE */
 
 	.image-showcase{
@@ -123,4 +131,9 @@
 	    grid-column: 11 / 13;
 	}
 
+
+	.purchase-section form{
+		margin-top: 4px;
+	}
+	 
 }
