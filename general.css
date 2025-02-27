@@ -73,7 +73,11 @@ button:hover, .button:hover, button:focus, .button:focus{
     text-decoration-thickness: 2px;
 }
 
-.not-allowed{
+.not-available{
+    opacity: .7;
+}
+
+.not-available:hover{
     cursor: not-allowed !important;
 }
 
@@ -127,6 +131,7 @@ select:focus{
     bottom: 0;
     width: 100%;
     height: 20px;
+    z-index: 20;
 }
 
 .shadow-bottom::after{
@@ -264,6 +269,7 @@ footer{
     left: 0;
     height: 100vh;
     display: none;
+    z-index: 100;
 }
 
 .overlay{
