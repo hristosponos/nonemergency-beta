@@ -13,14 +13,17 @@ window.onload = function() {
 // NEWSLETTER OPEN AND CLOSE FEATURES
 
 document.addEventListener("DOMContentLoaded", function () {
-    const openBtn = document.getElementById("newsletter-open");
+    const openBtn = document.querySelectorAll(".newsletter-open");
     const closeBtn = document.getElementById("newsletter-close");
     const newsletter = document.getElementById("newsletter");
     const overlay = document.getElementById("overlay");
 
     // OPEN
-    openBtn.addEventListener("click", function (event) {
+
+    openBtn.forEach(element => {
+      element.addEventListener("click", function() {
         newsletter.style.display = "flex";
+      });
     });
 
     // CLOSE
@@ -42,6 +45,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     form.addEventListener("submit", function(event) {
         event.preventDefault();
+        return;
 
         const selectedSize = sizeSelect.value;
         if (selectedSize=="not-selected") {
