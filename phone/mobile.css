@@ -118,6 +118,7 @@
 
 	.product-info .price{
 		display: block;
+		margin-bottom: 2px;
 	}
 
 	.product-info .price::after{
@@ -127,6 +128,10 @@
 		height: 1px;
 		background: black;
 	}
+
+	.product-info bold{
+		line-height: 125%
+	}
 	
 	.section-title{
 		display: block;
@@ -134,7 +139,7 @@
 	}
 
 	.product-info > div{
-		margin-bottom: .25rem;
+		margin-bottom: .3rem;
 	}
 
 	.product-info > div:last-child{
