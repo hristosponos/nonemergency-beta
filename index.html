@@ -30,7 +30,7 @@
 	<header class="shadow-bottom">
 		<div class="wrapper">
 			<img src="assets/nonem.png" alt="Logo" id="logo">
-			<img id="burger" src="assets/burger.svg">
+			<a id="burger"><img src="assets/burger.svg"></a>
 			<div id="header-links">
 				<a class="newsletter-open">Newsletter</a>
 				<div class="dropdown">
@@ -45,6 +45,31 @@
 			</div>
 		</div>
 	</header>
+	<div id="mob-nav-menu">
+		
+		<a id="mob-nav-close"><img src="assets/X.svg"></a>
+		<div class="mob-nav-links">
+			<a class="newsletter-open">Newsletter</a>
+			<div class="mob-dropdown">
+				<p>Social</p>
+				<div class="links">
+					<div class="line"></div>
+					<a href="">TikTok</a>
+					<a href="">Instagram</a>
+					<a href="">Pinterest</a>
+				</div>				
+			</div>
+			<a href="mailto:contact@nonemergency.eu">Contact</a>
+			<div class="mob-dropdown">
+				<p>Legal</p>
+				<div class="links">
+					<div class="line"></div>
+					<a href="">Privacy Policy</a>
+					<a href="">Terms of Service</a>
+				</div>				
+			</div>
+		</div>
+	</div>
 
 	<section class="swiper shadow-top" id="product-visual">
 		<div class="image-showcase swiper-wrapper"> <!-- SWIPER WRAPPER -->
@@ -88,11 +113,11 @@
 			<div class="purchase-section fixed-product-object">
 				<p class="section-title bold">Purchase</p>
 				<p class="price">Price: €50</p>
+				<div class="size-info">
+					<span>Size:</span>
+					<a>Size Guide</a>
+				</div>
 				<form id="buy-product-form">
-					<div class="size-info">
-						<p>Size:</p>
-						<a>Size Guide</a>
-					</div>
 					<select name="size" id="size" class="form-input">
 						<option value="not-selected" selected disabled>Choose Size</option>
 						<option value="S">S</option>
@@ -106,19 +131,22 @@
 
 	</div>
 	<section id="newsletter" class="newsletter-section">
-		<div class="newsletter">
-			<div class="newsletter-heading">
-				<h2>Newsletter</h2>
-				<a id="newsletter-close"><img src="assets/X.svg"></a>
+		<div class="wrapper grid">
+			<div class="newsletter">
+				<div class="newsletter-heading">
+					<h2>Newsletter</h2>
+					<a id="newsletter-close"><img src="assets/X.svg"></a>
+				</div>
+				<hr>
+				<p>Sign up to email updates on Nonemergency releases and more.<br>You may cancel anytime.</p>
+				<form action="" method="POST">
+					<input type="email" name="e" class="form-input" placeholder="E-mail">
+					<input type="submit" value="Sign Up" class="button">
+				</form>
+				<div class="background-blur"></div>
 			</div>
-			<hr>
-			<p>Sign up to email updates on Nonemergency releases and more.<br>You may cancel anytime.</p>
-			<form action="" method="POST">
-				<input type="email" name="e" class="form-input" placeholder="E-mail">
-				<input type="submit" value="Sign Up" class="button">
-			</form>
-			<div class="background-blur"></div>
 		</div>
+		
 		<div id="overlay" class="overlay"></div>
 	</section>
 	<div class="footer-border">
