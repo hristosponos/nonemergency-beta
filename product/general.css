@@ -26,13 +26,14 @@
     appearance: none;
     font-size: 1rem;
     background: none;
+    text-decoration-thickness: 1px !important;
 }
 
 
 /* GENERAL STYLES */
 
 h2{
-    font-weight: 800;
+    font-weight: 600;
     font-size: 2.25rem;
     line-height: 100%;
 }
@@ -41,12 +42,8 @@ h2{
     outline: 1px solid black;
 }
 
-hr{
-    border: 1px solid black;
-}
-
 footer, section, .grid{
-    width: 100%;
+    /*width: 100%;*/
     display: grid;
 }
 
@@ -70,7 +67,6 @@ button, .button{
 
 button:hover, .button:hover, button:focus, .button:focus{
     text-decoration: underline;
-    text-decoration-thickness: 1px;
 }
 
 .button-outlined{
@@ -93,21 +89,20 @@ button:hover, .button:hover, button:focus, .button:focus{
     box-sizing: border-box;
 }
 
-@media (max-width:  1500px){
+@media (max-width:  1480px){
     .wrapper{
-        padding: 0 20px;
-        margin: 0;
+        margin: 0 20px;
+    }
+
+    #product-text section{
+        margin: 0 20px !important;
     }
 }
 
 a{
-    text-decoration: none;
+    color: #161616c2;
     cursor: pointer;
-}
-
-a:hover{
     text-decoration: underline;
-    text-decoration-thickness: 1px;
 }
 
 .bold{
@@ -175,15 +170,23 @@ header{
 }
 
 header > .wrapper{
-    width: 100%;
     display: flex;
     align-items: center;
     justify-content: end;
     height: 2rem;
 }
 
+header a{
+    color: #161616 !important;
+    text-decoration: none !important;
+}
+
+header a:hover{
+    text-decoration: underline !important;
+}
+
 #logo{
-    height: 2.5rem; /* MAKE RESPONSIVE */
+    height: 2rem; 
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -213,7 +216,7 @@ header > .wrapper{
 }
 
 .size-info *{
-    color: rgba(0, 0, 0, .6);
+    color: #161616c2;
     font-size: .8rem;
     width: auto !important;
 }
@@ -243,9 +246,9 @@ footer{
 }
 
 
-/* NEWSLETTER */
+/* OVERLAY-MENUS */
 
-.newsletter{
+.overlay-menu{
     border: 2px solid black;
     padding: 1rem;
     height: fit-content;
@@ -253,6 +256,46 @@ footer{
     background: white;
     z-index: 2;
 }
+
+.overlay-menu-heading{
+    display: flex;
+    align-items: self-start;    
+    justify-content: space-between;
+}
+
+.overlay-menu-section{
+    position: fixed; 
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    display: none;
+    z-index: 100;
+}
+
+.overlay-menu hr{
+    margin-bottom: 4px;
+    height: 1px;
+    background: black;
+}
+
+.overlay-menu-section .wrapper{
+    height: 100%;
+}
+
+.overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    background: rgba(255, 255, 255, .6);
+}
+
+.overlay-menu-section.activated{
+    display: block !important;
+}
+
+/* NEWSLETTER */
 
 .newsletter form{
     display: flex;
@@ -265,33 +308,30 @@ footer{
     width: fill-available;
 }
 
-.newsletter hr{
-    margin-bottom: 4px;
+
+/* SIZE CHART */
+
+.chart-table{
+    border-collapse: collapse;
 }
 
-.newsletter-heading{
-    display: flex;
-    align-items: self-start;    
-    justify-content: space-between;
+.chart-table td, th{
+    padding: .25rem .5rem !important;
 }
 
-.newsletter-section{
-    position: fixed; 
-    top: 0;
-    left: 0;
-    height: 100vh;
-    display: none;
-    z-index: 100;
+.chart-table tr > th:first-child,  .chart-table tr > td:first-child{
+    text-align: right;
 }
 
-.newsletter-section .wrapper{
-    height: 100%;
+.chart-table tr td{
+    border-top: 1px solid black;
 }
 
-.overlay{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    background: rgba(255, 255, 255, .6);
+.chart-table th:not(:last-child), .chart-table td:not(:last-child){
+    border-right: 1px black solid;
 }
+
+.chart-table p{
+    margin-top: .5rem;
+}
+

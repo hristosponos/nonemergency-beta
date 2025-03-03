@@ -114,7 +114,7 @@
 	}
 
 	.image-showcase > *:first-child{
-	    margin-top: max(6rem, calc(50vh - var(--first-image-offset)));
+	    margin-top: calc(50vh - var(--first-image-offset) + 2rem); /* 2rem = image padding on bottom */
 	}
 
 	.image-showcase > *:last-child{
@@ -124,19 +124,20 @@
 	/* PURCHASE SECTION */
 
 	#product-text{
+	    max-width: unset;
+	    width: 100%;
+	    height: 100%;
 	    position: fixed;
 	    top: 0;
-	    left: 50%;
-	    transform: translateX(-50%);
-	    display: flex;
-	    width: 100%;
-	    height: 100vh;
-	    z-index: 100;
+	    align-content: center;
 	    z-index: 1;
+	    margin: 0;
 	}
 
 	#product-text section{
-		margin: auto 0;
+		align-items: center;
+		max-width: 1440px;
+		margin: 0 auto;
 	}
 
 	.purchase-section{
@@ -148,9 +149,9 @@
 	}
 
 	
-	/* NEWSLETTER */
+	/* overlay-menu */
 
-	.newsletter{
-    	grid-column: 5 / 9;
+	.overlay-menu{
+    	grid-column: 4 / 10;
 	}
 }

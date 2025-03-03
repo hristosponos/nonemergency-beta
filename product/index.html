@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -30,9 +30,9 @@
 	<header class="shadow-bottom">
 		<div class="wrapper">
 			<img src="assets/nonem.png" alt="Logo" id="logo">
-			<a id="burger"><img src="assets/burger.svg"></a>
+			<a id="burger" class="mob-nav-toggle"><img src="assets/burger.svg"></a>
 			<div id="header-links">
-				<a class="newsletter-open">Newsletter</a>
+				<a class="newsletter-toggle">Newsletter</a>
 				<div class="dropdown">
 					<a>Social</a>
 					<div class="dropdown-items">
@@ -46,10 +46,9 @@
 		</div>
 	</header>
 	<div id="mob-nav-menu">
-		
-		<a id="mob-nav-close"><img src="assets/X.svg"></a>
+		<a id="mob-nav-close" class="mob-nav-toggle"><img src="assets/X.svg"></a>
 		<div class="mob-nav-links">
-			<a class="newsletter-open">Newsletter</a>
+			<a class="newsletter-toggle mob-nav-toggle">Newsletter</a>
 			<div class="mob-dropdown">
 				<p>Social</p>
 				<div class="links">
@@ -70,8 +69,8 @@
 			</div>
 		</div>
 	</div>
-
-	<section class="swiper shadow-top" id="product-visual">
+	<div class="wrapper" id="image-showcase-wrapper">
+		<section class="swiper shadow-top" id="product-visual">
 		<div class="image-showcase swiper-wrapper"> <!-- SWIPER WRAPPER -->
 			<div class="swiper-slide">
 				<img src="assets/MDMA-photos/photo2.jpg">
@@ -80,7 +79,7 @@
 				<img src="assets/MDMA-photos/photo0.jpg">
 			</div>
 			<div class="swiper-slide">
-				<video autoplay muted loop>
+				<video loading="lazy" autoplay muted loop playsinline>
 					<source src="assets/MDMA-photos/video0.mp4" type="video/mp4">
 				</video>
 			</div>
@@ -89,6 +88,8 @@
 			</div>
 		</div>
 	</section>
+	</div>
+	
 	<div class="wrapper" id="product-text">
 		<div id="swiper-pagination"></div>
 		<section>
@@ -115,7 +116,7 @@
 				<p class="price">Price: €50</p>
 				<div class="size-info">
 					<span>Size:</span>
-					<a>Size Guide</a>
+					<a class="size-chart-toggle">Size Chart</a>
 				</div>
 				<form id="buy-product-form">
 					<select name="size" id="size" class="form-input">
@@ -124,18 +125,18 @@
 						<option value="M">M</option>
 					</select>
 					<button type="submit" value="Checkout" id="purchase-btn" class="not-available ">Coming Soon</button>
-					<button type="submit" value="Notify Me" id="purchase-btn" class="button-outlined newsletter-open">Notify Me</button>
+					<button type="submit" value="Notify Me" id="purchase-btn" class="button-outlined newsletter-toggle">Notify Me</button>
 				</form>
 			</div>
 		</section>
 
 	</div>
-	<section id="newsletter" class="newsletter-section">
+	<section class="overlay-menu-section newsletter-window">
 		<div class="wrapper grid">
-			<div class="newsletter">
-				<div class="newsletter-heading">
+			<div class="overlay-menu newsletter">
+				<div class="overlay-menu-heading">
 					<h2>Newsletter</h2>
-					<a id="newsletter-close"><img src="assets/X.svg"></a>
+					<a class="newsletter-toggle"><img src="assets/X.svg"></a>
 				</div>
 				<hr>
 				<p>Sign up to email updates on Nonemergency releases and more.<br>You may cancel anytime.</p>
@@ -146,9 +147,46 @@
 				<div class="background-blur"></div>
 			</div>
 		</div>
-		
-		<div id="overlay" class="overlay"></div>
+		<div class="overlay newsletter-window newsletter-toggle"></div>
 	</section>
+
+	<section class="overlay-menu-section size-chart-window">
+		<div class="wrapper grid">
+			<div class="overlay-menu">
+				<div class="overlay-menu-heading">
+					<h2>Size Chart</h2>
+					<a class="size-chart-toggle"><img src="assets/X.svg"></a>
+				</div>
+				<hr>
+				<table class="chart-table">
+					<tr>
+						<th>Size</th>
+						<th>Chest Width</th>
+						<th>Body Length</th>
+						<th>Sleeve Length</th>
+						<th>Shoulder Width</th>
+					</tr>
+					<tr>
+						<td>S</td>
+						<td>50 cm</td>
+						<td>61 cm</td>
+						<td>64 cm</td>
+						<td>45 cm</td>
+					</tr>
+					<tr>
+						<td>M</td>
+						<td>55 cm</td>
+						<td>65 cm</td>
+						<td>68 cm</td>
+						<td>49 cm</td>
+					</tr>
+				</table>
+				<p>Relaxed/Boxy fit.<br>All models are wearing size S.<br><a href="mailto:contact@nonemergency.eu">Contact</a> us for any questions.</p>
+			</div>
+		</div>
+		<div class="overlay size-chart-toggle size-chart-window"></div>
+	</section>
+
 	<div class="footer-border">
 		<footer class="wrapper">
 			<p class="small-text">© 2025 <span class="bold">Nonemergency OÜ</span>. All Rights Reserved.</p>
