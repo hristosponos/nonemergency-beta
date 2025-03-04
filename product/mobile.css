@@ -162,6 +162,7 @@
 
 	#product-text{
 		margin: unset;
+		padding-top: .5rem;
 	}
 
 	.product-info{
@@ -185,13 +186,8 @@
 		background: black;
 	}
 
-	.product-info bold{
-		line-height: 125%
-	}
-	
-	.section-title{
-		display: block;
-		margin-top: .75rem;
+	.product-info .section-title{
+		margin-top: .5rem;
 	}
 
 	.product-info > div{
