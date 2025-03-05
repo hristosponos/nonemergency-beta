@@ -17,7 +17,7 @@
     padding: 0;
     font-family: "Yantramanav", serif;
     font-weight: 400;
-    color: #161616; 
+    color: white;
     border: none;
     border-radius: 0;
     outline: none;
@@ -37,9 +37,15 @@
     background-position: center;
     width: 100vw;
     height: 100vh;
+    align-content: center;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    gap: 1rem;
+    cursor: pointer;
 }
 
+#logo{
+    max-width: calc(100vw - 40px);
+}
